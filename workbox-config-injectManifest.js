@@ -1,11 +1,3 @@
-# login-cache-test
-測試登入前與登入後的快取處理
-
-## 排除快取的名單
-*  於 workbox-config.js 中的 globIgnores 參數設定
-
-workbox-config-injectManifest.js
-```js
 module.exports = {
   "globDirectory": "./",
   "globPatterns": [
@@ -18,4 +10,3 @@ module.exports = {
     "index-logged-in.html**"
   ]
 };
-```

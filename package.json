@@ -1,0 +1,27 @@
+{
+  "name": "login-cache-test",
+  "version": "1.0.0",
+  "description": "測試登入前與登入後的快取處理",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node -r esm ./server.js",
+    "build-sw": "workbox generateSW workbox-config.js",
+    "build-sw-im": "workbox injectManifest workbox-config-injectManifest.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dingzhengru/login-cache-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dingzhengru/login-cache-test/issues"
+  },
+  "homepage": "https://github.com/dingzhengru/login-cache-test#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "esm": "^3.2.25",
+    "express": "^4.17.1"
+  }
+}
