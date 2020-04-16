@@ -7,8 +7,10 @@ npm install
 npm start
 ```
 
-## 排除快取的名單
-*  於 workbox-config.js 中的 globIgnores 參數設定
+## Workbox
+
+### 排除快取的名單
+*  於 workbox-config.js 中的 globIgnores 參數設定，參考此回答: https://stackoverflow.com/questions/58607289/glob-patterns-doesnt-match-any-files-workbox
 
 workbox-config-injectManifest.js
 ```js
@@ -24,4 +26,8 @@ module.exports = {
     "index-logged-in.html**"
   ]
 };
+```
+
+```bash
+workbox injectManifest workbox-config-injectManifest.js
 ```

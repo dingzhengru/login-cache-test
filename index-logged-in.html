@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>已登入</title>
+  <title>login-cache-test</title>
+
+  <link rel="stylesheet" type="text/css" href="./css/style.css" />
+
 </head>
 <body>
+  <ul>
+    <li><a href="/">登入頁面</a></li>
+    <li><a href="/loged-in">已登入頁面</a></li>
+  </ul>
+
+  <div id="login-status"></div>
+
   <h1>已登入123</h1>
 
   <button onclick="logout()" style="padding:10px;font-size: 24px;">登出</button>
 
   <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js" crossorigin="anonymous"></script>
   <script src="./index.js"></script>
+  <script src="./js/test.js"></script>
   <script>
     function logout() {
       Cookies.remove('isLogedIn')
@@ -20,7 +31,7 @@
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('./sw.js').then(function(registration) {
-          console.log(registration)
+          console.log('sw registered')
         })
       })
     }
